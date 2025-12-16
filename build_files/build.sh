@@ -26,7 +26,6 @@ dnf5 install -y \
     clang \
     cmake \
     quickshell \
-    tmux \
     noctalia-shell 
 
 # Disable COPRs to keep base image clean (optional, keeping enabled for updates might be desired, but standard practice is often to disable if not signed properly, though here we might leave them enabled or rely on user preference. I'll disable for safety/cleanliness unless they are needed for runtime updates). 
