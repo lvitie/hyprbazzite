@@ -10,15 +10,27 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+# Install Noctalia Shell dependencies via COPR
+dnf5 -y copr enable errornointernet/quickshell
+dnf5 -y copr enable zhangyi6324/noctalia-shell
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# Install packages
+dnf5 install -y \
+    hyprland \
+    xdg-desktop-portal-hyprland \
+    waybar \
+    kitty \
+    niri \
+    dotnet-sdk-8.0 \
+    clang \
+    cmake \
+    vulkan-tools \
+    quickshell \
+    noctalia-shell
 
-#### Example for enabling a System Unit File
+# Disable COPRs to keep base image clean (optional, keeping enabled for updates might be desired, but standard practice is often to disable if not signed properly, though here we might leave them enabled or rely on user preference. I'll disable for safety/cleanliness unless they are needed for runtime updates). 
+# Actually, for OSTree images, existing repos are usually kept for updates. I will comment out disabling.
+# dnf5 -y copr disable errornointernet/quickshell
+# dnf5 -y copr disable zhangyi6324/noctalia-shell
 
-systemctl enable podman.socket
+# Enable any services if needed (none strictly for these, maybe portal but that's DBus activated)
