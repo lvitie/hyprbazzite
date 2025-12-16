@@ -19,9 +19,13 @@ dnf5 -y copr enable solopasha/hyprland
 dnf5 install -y \
     hyprland \
     xdg-desktop-portal-hyprland \
-    waybar \
-    kitty \
+    hyprland-qtutils \
+    alacritty \
     niri \
+    wl-clipboard \
+    grim \
+    slurp \
+    pavucontrol \
     dotnet-sdk-8.0 \
     clang \
     cmake \

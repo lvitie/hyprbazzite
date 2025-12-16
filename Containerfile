@@ -1,9 +1,10 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
+COPY files /
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-nvidia:stable
+FROM ghcr.io/ublue-os/bazzite-dx-nvidia:stable
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest

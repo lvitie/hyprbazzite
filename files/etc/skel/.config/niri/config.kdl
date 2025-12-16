@@ -1,0 +1,10 @@
+// Default Niri Config for Bazzite Custom Image
+
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "xwayland-satellite"
+
+binds {
+    Mod+Return { spawn "alacritty"; }
+    Mod+Q { close-window; }
+    Mod+Shift+E { quit; }
+}
