@@ -24,9 +24,9 @@ dnf5 install -y \
     dotnet-sdk-8.0 \
     clang \
     cmake \
-    vulkan-tools \
     quickshell \
-    noctalia-shell
+    tmux \
+    noctalia-shell 
 
 # Disable COPRs to keep base image clean (optional, keeping enabled for updates might be desired, but standard practice is often to disable if not signed properly, though here we might leave them enabled or rely on user preference. I'll disable for safety/cleanliness unless they are needed for runtime updates). 
 # Actually, for OSTree images, existing repos are usually kept for updates. I will comment out disabling.
@@ -34,3 +34,4 @@ dnf5 install -y \
 # dnf5 -y copr disable zhangyi6324/noctalia-shell
 
 # Enable any services if needed (none strictly for these, maybe portal but that's DBus activated)
+systemctl enable podman.socket
