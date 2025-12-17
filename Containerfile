@@ -4,7 +4,7 @@ COPY files /
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-dx-nvidia:41
+FROM ghcr.io/ublue-os/bazzite-dx-nvidia:stable
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
