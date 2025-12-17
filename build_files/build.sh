@@ -19,7 +19,7 @@ dnf5 -y copr enable lionheartp/Hyprland
 dnf5 install -y \
     hyprland \
     xdg-desktop-portal-hyprland \
-    hyprland-qtutils \
+    hyprland-guiutils \
     alacritty \
     niri \
     grim \
