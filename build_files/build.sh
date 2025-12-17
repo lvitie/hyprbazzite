@@ -22,7 +22,6 @@ dnf5 install -y \
     hyprland-qtutils \
     alacritty \
     niri \
-    wl-clipboard \
     grim \
     slurp \
     pavucontrol \
