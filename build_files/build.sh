@@ -3,6 +3,8 @@
 set -ouex pipefail
 
 ### Install packages
+# Copy config files
+cp -r /ctx/files/etc /etc
 
 # Packages can be installed from any enabled yum repo on the image.
 # RPMfusion repos are available by default in ublue main images
