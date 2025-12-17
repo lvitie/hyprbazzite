@@ -13,7 +13,7 @@ set -ouex pipefail
 # Install Noctalia Shell dependencies via COPR
 dnf5 -y copr enable errornointernet/quickshell
 dnf5 -y copr enable zhangyi6324/noctalia-shell
-dnf5 -y copr enable solopasha/hyprland
+dnf5 -y copr enable lionheartp/Hyprland
 
 # Install packages
 dnf5 install -y \
